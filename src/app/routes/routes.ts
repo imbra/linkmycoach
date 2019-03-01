@@ -38,7 +38,7 @@ export const routes = [
     { path: 'maintenance', component: MaintenanceComponent },
     { path: '404', component: Error404Component },
     { path: '500', component: Error500Component },
-    { path: 'programs', component: ProgramComponent},
+    { path: 'program', component: ProgramComponent},
 
     // Not found
     { path: '**', redirectTo: 'home' }
