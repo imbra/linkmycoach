@@ -5,30 +5,34 @@ const Home = {
     icon: 'icon-home'
 };
 
-const Dashboard = {
-    text: 'Dashboard',
-    link: '/dashboard',
-    icon: 'icon-speedometer',
-    submenu: [
-        {
-            text: 'Dashbord v1',
-            link: '/dashboard/v1'
-        },
-        {
-            text: 'Dashbord v2',
-            link: '/dashboard/v2'
-        },
-        {
-            text: 'Dashbord v3',
-            link: '/dashboard/v3'
-        }
-    ]
-};
-
 const Widgets = {
     text: 'Widgets',
     link: '/widgets',
     icon: 'icon-grid'
+};
+
+const Dashboard = {
+    text: 'Dashboard',
+    link: '/dashboard/v1',
+    icon: 'icon-speedometer'
+};
+
+const Agenda = {
+    text: 'Agenda',
+    link: '/extras/calendar',
+    icon: 'icon-calendar'
+};
+
+const Coachees = {
+    text: 'Coachees',
+    link: '/extras/contacts',
+    icon: 'icon-people'
+};
+
+const Resources = {
+    text: 'Resources',
+    link: '/extras/filemanager',
+    icon: 'icon-folder'
 };
 
 const Elements = {
@@ -249,7 +253,7 @@ const Blog = {
             link: '/blog/articleview'
         }
     ]
-}
+};
 
 const Ecommerce = {
     text: 'Ecommerce',
@@ -277,7 +281,7 @@ const Ecommerce = {
             link: '/ecommerce/checkout'
         }
     ]
-}
+};
 
 const Extras = {
     text: 'Extras',
@@ -377,7 +381,7 @@ const Extras = {
             link: '/extras/codeeditor'
         }
     ]
-}
+};
 
 
 const headingMain = {
@@ -395,10 +399,19 @@ const headingMore = {
     heading: true
 };
 
+const Faq = {
+    text: 'Faq',
+    link: '/extras/faq',
+    icon: 'icon-question'
+};
+
 export const menu = [
     headingMain,
     Home,
     Dashboard,
+    Agenda,
+    Coachees,
+    Resources,
     Widgets,
     headingComponents,
     Elements,
@@ -410,5 +423,6 @@ export const menu = [
     Pages,
     Blog,
     Ecommerce,
-    Extras
+    Extras,
+    Faq
 ];
