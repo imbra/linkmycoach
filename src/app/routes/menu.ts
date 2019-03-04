@@ -23,12 +23,6 @@ const Agenda = {
     icon: 'icon-calendar'
 };
 
-const Programs = {
-    text: 'Programs',
-    link: '/program',
-    icon: 'icon-notebook'
-};
-
 const Coachees = {
     text: 'Coachees',
     link: '/extras/contacts',
@@ -416,7 +410,6 @@ export const menu = [
     Home,
     Dashboard,
     Agenda,
-    Programs,
     Coachees,
     Resources,
     Widgets,
