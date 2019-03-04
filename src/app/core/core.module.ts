@@ -5,7 +5,9 @@ import { ThemesService } from './themes/themes.service';
 import { TranslatorService } from './translator/translator.service';
 import { MenuService } from './menu/menu.service';
 
+import { CallbackComponent } from './auth/callback/callback.component';
 import { throwIfAlreadyLoaded } from './module-import-guard';
+
 
 @NgModule({
     imports: [
@@ -17,7 +19,7 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
         MenuService
     ],
     declarations: [
-    ],
+    CallbackComponent],
     exports: [
     ]
 })

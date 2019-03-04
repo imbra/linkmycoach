@@ -8,6 +8,8 @@ import { MaintenanceComponent } from './pages/maintenance/maintenance.component'
 import { Error404Component } from './pages/error404/error404.component';
 import { Error500Component } from './pages/error500/error500.component';
 
+import { CallbackComponent } from '../core/auth/callback/callback.component';
+
 export const routes = [
 
     {
@@ -37,6 +39,7 @@ export const routes = [
     { path: 'maintenance', component: MaintenanceComponent },
     { path: '404', component: Error404Component },
     { path: '500', component: Error500Component },
+    { path: 'callback', component: CallbackComponent},
 
     // Not found
     { path: '**', redirectTo: 'home' }

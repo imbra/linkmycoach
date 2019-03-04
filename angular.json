@@ -50,7 +50,8 @@
               "node_modules/bootstrap/js/dist/tooltip.js",
               "node_modules/summernote/dist/summernote.js",
               "node_modules/moment/min/moment-with-locales.min.js",
-              "node_modules/fullcalendar/dist/fullcalendar.js"
+              "node_modules/fullcalendar/dist/fullcalendar.js",
+              "node_modules/auth0-js/dist/auth0.js"
             ]
           },
           "configurations": {
@@ -128,7 +129,8 @@
               "node_modules/bootstrap/js/dist/tooltip.js",
               "node_modules/summernote/dist/summernote.js",
               "node_modules/moment/min/moment-with-locales.min.js",
-              "node_modules/fullcalendar/dist/fullcalendar.js"
+              "node_modules/fullcalendar/dist/fullcalendar.js",
+              "node_modules/auth0-js/dist/auth0.js"
             ],
             "assets": [
               "src/favicon.ico",
