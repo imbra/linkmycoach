@@ -17,6 +17,12 @@ const Dashboard = {
     icon: 'icon-speedometer'
 };
 
+const Programs = {
+    text: 'Programs',
+    link: '/programs',
+    icon: 'icon-grid'
+};
+
 const Agenda = {
     text: 'Agenda',
     link: '/extras/calendar',
@@ -409,6 +415,7 @@ export const menu = [
     headingMain,
     Home,
     Dashboard,
+    Programs,
     Agenda,
     Coachees,
     Resources,

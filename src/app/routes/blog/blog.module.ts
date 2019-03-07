@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { NgxSelectModule } from 'ngx-select-ex'
+import { NgxSelectModule } from 'ngx-select-ex';
 
 import { SharedModule } from '../../shared/shared.module';
 import { ListComponent } from './list/list.component';

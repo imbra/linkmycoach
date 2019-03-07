@@ -10,9 +10,9 @@ import { ColorsService } from '../../../shared/colors/colors.service';
 })
 export class Dashboardv1Component implements OnInit {
 
-    sparkValues = [1,3,4,7,5,9,4,4,7,5,9,6,4];
+    sparkValues = [1, 3, 4, 4, 5, 5, 6, 7, 8, 9 , 9, 10, 12];
 
-    easyPiePercent: number = 70;
+    easyPiePercent: 70;
     pieOptions = {
         animate: {
             duration: 800,
@@ -74,7 +74,7 @@ export class Dashboardv1Component implements OnInit {
         },
         tooltip: true,
         tooltipOpts: {
-            content: (label, x, y) => { return x + ' : ' + y; }
+            content: (label, x, y) => x + ' : ' + y
         },
         xaxis: {
             tickColor: '#fcfcfc',

@@ -19,6 +19,7 @@ export const routes = [
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'home', loadChildren: './home/home.module#HomeModule' },
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
+            { path: 'programs', loadChildren: './programs/programs.module#ProgramsModule' },
             { path: 'widgets', loadChildren: './widgets/widgets.module#WidgetsModule' },
             { path: 'elements', loadChildren: './elements/elements.module#ElementsModule' },
             { path: 'forms', loadChildren: './forms/forms.module#FormsModule' },

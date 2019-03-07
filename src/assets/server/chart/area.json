@@ -1,5 +1,5 @@
 [{
-  "label": "Uniques",
+  "label": "Total",
   "color": "#aad874",
   "data": [
     ["Mar", 50],
@@ -11,7 +11,7 @@
     ["Sep", 58]
   ]
 }, {
-  "label": "Recurrent",
+  "label": "Invoiced",
   "color": "#7dc7df",
   "data": [
     ["Mar", 13],

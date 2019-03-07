@@ -22,20 +22,22 @@ export class AppComponent implements OnInit {
     @HostBinding('class.aside-collapsed-text') get isCollapsedText() { return this.settings.getLayoutSetting('isCollapsedText'); }
 
     constructor(public settings: SettingsService, public auth: AuthService) {
-        auth.handleAuthentication();
+        // auth.handleAuthentication();
     }
 
     ngOnInit() {
-        if (localStorage.getItem('isLoggedIn') === 'true') {
-            this.auth.renewTokens();
-        } else {
-            this.auth.login();
-        }
         document.addEventListener('click', e => {
             const target = e.target as HTMLElement;
             if (target.tagName === 'A') {
                 e.preventDefault();
             }
         });
+        /*
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+            this.auth.renewTokens();
+        } else {
+            this.auth.login();
+        }
+        */
     }
 }
