@@ -13,6 +13,8 @@ import { SharedModule } from './shared/shared.module';
 import { RoutesModule } from './routes/routes.module';
 import { AuthService } from './core/auth/auth.service';
 
+import { SortablejsModule } from 'angular-sortablejs';
+
 // https://github.com/ocombe/ng2-translate/issues/218
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -27,6 +29,7 @@ export function createTranslateLoader(http: HttpClient) {
         BrowserAnimationsModule, // required for ng2-tag-input
         CoreModule,
         LayoutModule,
+        SortablejsModule.forRoot({ animation: 150 }),
         SharedModule.forRoot(),
         RoutesModule,
         TranslateModule.forRoot({
