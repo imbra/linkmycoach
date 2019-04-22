@@ -11,7 +11,8 @@
             <div class="card-header">Program items</div>
               <div class="card-body">
                 <div [sortablejs]="items">
-                    <div *ngFor="let item of items" class="sortable">{{ item }}</div>
+                    <div *ngFor="let item of items" class="sortable">
+                      <span class="badge">{{ item.type }}</span>{{ item.title }}</div>
                   </div>
               </div>
           </div>
