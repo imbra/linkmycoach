@@ -1,7 +1,10 @@
 import { Component, HostBinding, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 import { SettingsService } from './core/settings/settings.service';
-import { AuthService } from './core/auth/auth.service';
+
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
     selector: 'app-root',
@@ -21,8 +24,7 @@ export class AppComponent implements OnInit {
     @HostBinding('class.aside-toggled') get asideToggled() { return this.settings.getLayoutSetting('asideToggled'); }
     @HostBinding('class.aside-collapsed-text') get isCollapsedText() { return this.settings.getLayoutSetting('isCollapsedText'); }
 
-    constructor(public settings: SettingsService, public auth: AuthService) {
-        // auth.handleAuthentication();
+    constructor(public settings: SettingsService) {
     }
 
     ngOnInit() {
@@ -32,12 +34,5 @@ export class AppComponent implements OnInit {
                 e.preventDefault();
             }
         });
-        /*
-        if (localStorage.getItem('isLoggedIn') === 'true') {
-            this.auth.renewTokens();
-        } else {
-            this.auth.login();
-        }
-        */
     }
 }

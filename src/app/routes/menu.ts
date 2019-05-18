@@ -11,6 +11,11 @@ const Widgets = {
     icon: 'icon-grid'
 };
 
+const UserList = {
+    text: 'UserList',
+    link: '/userlist'
+};
+
 const Dashboard = {
     text: 'Dashboard',
     link: '/dashboard/v1',
@@ -416,6 +421,7 @@ export const menu = [
     Home,
     Dashboard,
     Programs,
+    UserList,
     Agenda,
     Coachees,
     Resources,

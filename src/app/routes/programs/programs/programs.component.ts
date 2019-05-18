@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { Item } from '../../../shared/models/coaching-process-item';
+import { Item, ItemType } from '../../../shared/models/coaching-process-item';
 
 @Component({
   selector: 'app-programs',
@@ -18,14 +18,31 @@ export class ProgramsComponent implements OnInit {
 
     getItems(): void {
       this.items = [
-        {id: '1', title: 'How to get better sessions', type: 'session' },
-        {id: '2', title: 'Basic fit Questions', type: 'file' },
-        {id: '3', title: 'Fill in the Basic Fit Quesions', type: 'task' },
-        {id: '4', title: 'Discuss Basic fit', type: 'session' },
-        {id: '5', title: 'Another day session', type: 'session' },
-        {id: '6', title: 'Follow up task', type: 'task' },
-        {id: '7', title: 'Final session', type: 'session' }
+        {id: '1', title: 'How to get better sessions', type: ItemType.session, icon: this.itemTypeIcon(ItemType.session) },
+        {id: '2', title: 'Basic fit Questions', type: ItemType.file, icon: this.itemTypeIcon(ItemType.file) },
+        {id: '3', title: 'Fill in the Basic Fit Quesions', type: ItemType.task, icon: this.itemTypeIcon(ItemType.task) },
+        {id: '4', title: 'Discuss Basic fit', type: ItemType.session, icon: this.itemTypeIcon(ItemType.session) },
+        {id: '5', title: 'Another day session', type: ItemType.session, icon: this.itemTypeIcon(ItemType.session) },
+        {id: '6', title: 'Follow up task', type: ItemType.task, icon: this.itemTypeIcon(ItemType.task) },
+        {id: '7', title: 'Final session', type: ItemType.session, icon: this.itemTypeIcon(ItemType.session) }
       ];
+    }
+
+    itemTypeIcon(itemType: ItemType): string {
+      switch (itemType) {
+        case ItemType.session:
+          return 'icon-people';
+          break;
+        case ItemType.task:
+          return 'icon-note';
+          break;
+        case ItemType.file:
+          return 'icon-doc';
+          break;
+        default:
+          return 'icon-cup';
+          break;
+      }
     }
 
 }

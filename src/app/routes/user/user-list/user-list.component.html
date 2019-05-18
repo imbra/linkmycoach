@@ -1,0 +1,28 @@
+<div class="content-heading">
+  <div>
+      Coaching Programs
+      <small>Here you can add/remove or edit your coaching programs</small>
+  </div>
+</div>
+<div class="card card-transparent">
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Surename</th>
+    <th>Type</th>
+    <th>Birth Date</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+
+      <td>{{user.name}}</td>
+      <td>{{user.surename}}</td>
+      <td>{{user.type}}</td>
+      <td>{{user.birthDate}}</td>
+      <td>
+          <button (click)="delete(user.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
