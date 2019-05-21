@@ -1,4 +1,8 @@
 import { Component, OnInit, AfterViewInit, ElementRef, ViewChild, OnDestroy } from '@angular/core';
+import { Session } from '../../../shared//models/session.model';
+import { SessionsService } from '../../../session/sessions.service';
+import { forEach } from '@angular/router/src/utils/collection';
+
 declare var $: any;
 
 @Component({
@@ -33,17 +37,34 @@ export class CalendarComponent implements OnInit, AfterViewInit, OnDestroy {
         dayClick: this.dayClick.bind(this)
     };
 
-    calendarEvents: Array<any> = this.createDemoEvents();
+    calendarEvents: Array<any> = new Array<any>();
+    sessions: Session[];
     selectedEvent = null;
 
     // reference to the calendar element
     @ViewChild('fullcalendar') fullcalendar: ElementRef;
 
-    constructor() {
+    constructor(private sesssionService: SessionsService) {
         this.calendarOptions.events = this.calendarEvents;
     }
 
     ngOnInit() {
+        this.sesssionService.getSessions().subscribe( data => {
+            this.sessions = data.map(e => {
+                return {
+                    id: e.payload.doc.id,
+                    ...e.payload.doc.data()
+                } as Session;
+            });
+                this.sessions.forEach(session => {
+                    this.addEvent({
+                        title: session.title,
+                        start: session.dateTimeStart,
+                        backgroundColor: '#c594c5', // purple
+                        borderColor: '#c594c5' // purple
+                    });
+                });
+        });
         this.$calendar = $(this.fullcalendar.nativeElement);
     }
 

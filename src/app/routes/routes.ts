@@ -19,7 +19,7 @@ export const routes = [
         path: '',
         component: LayoutComponent,
         children: [
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
+            { path: '', redirectTo: 'dashboard/v1', pathMatch: 'full' },
             { path: 'home', loadChildren: './home/home.module#HomeModule' },
             { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
             { path: 'programs', loadChildren: './programs/programs.module#ProgramsModule' },
@@ -47,6 +47,6 @@ export const routes = [
     { path: 'userlist', component: UserListComponent },
 
     // Not found
-    { path: '**', redirectTo: 'home' }
+    { path: '**', redirectTo: 'dashboard/v1' }
 
 ];

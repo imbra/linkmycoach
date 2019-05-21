@@ -418,7 +418,7 @@ const Faq = {
 
 export const menu = [
     headingMain,
-    Home,
+    // Home,
     Dashboard,
     Programs,
     UserList,

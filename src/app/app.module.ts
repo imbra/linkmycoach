@@ -25,6 +25,7 @@ import { RoutesModule } from './routes/routes.module';
 import { SortablejsModule } from 'angular-sortablejs';
 import { UserListComponent } from './routes/user/user-list/user-list.component';
 import { LoginComponent } from './core/login/login.component';
+import { SessionComponent } from './session/session.component';
 
 // https://github.com/ocombe/ng2-translate/issues/218
 export function createTranslateLoader(http: HttpClient) {
@@ -34,7 +35,8 @@ export function createTranslateLoader(http: HttpClient) {
     declarations: [
         AppComponent,
         UserListComponent,
-        LoginComponent
+        LoginComponent,
+        SessionComponent
     ],
     imports: [
         HttpClientModule,

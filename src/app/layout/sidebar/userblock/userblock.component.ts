@@ -18,6 +18,10 @@ export class UserblockComponent implements OnInit {
 
     ngOnInit() {
         // set default username and avatar
+        this.user = {
+          displayName: 'Misha',
+          photoURL: 'https://pbs.twimg.com/profile_images/1058884992967827456/NewxtK7j_400x400.jpg'
+      };
 
         const firebaseUiAuthConfig: firebaseui.auth.Config = {
             signInFlow: 'popup',
@@ -37,10 +41,10 @@ export class UserblockComponent implements OnInit {
             if (user) {
               this.user = user;
             } else {
-                // this.user = {
-                //     displayName: 'Misha',
-                //     photoURL: 'https://pbs.twimg.com/profile_images/1058884992967827456/NewxtK7j_400x400.jpg'
-                // };
+                this.user = {
+                    displayName: 'Misha',
+                    photoURL: 'https://pbs.twimg.com/profile_images/1058884992967827456/NewxtK7j_400x400.jpg'
+                };
             }
           });
     }
